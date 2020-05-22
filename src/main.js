@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import App from './App.vue'
-import './registerServiceWorker'
 import router from './router'
 import store from './store'
-import './plugins/element-up.js'
-
-import { VuePlugin } from 'vuera';
-Vue.use(VuePlugin);
 
 
-Vue.config.productionTip = false
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+import './plugins/element.js'
+
+import '@/style/zxx.css';  // 全局 css
+
+Vue.use(ElementUI);
+
+
+
+
+Vue.config.productionTip = false;
 
 new Vue({
   router,
